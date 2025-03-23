@@ -36,12 +36,12 @@ jobs:
 
       - name: Start V2ray
         # 每次运行时间 60分钟
-        timeout-minutes: 60
+        timeout-minutes: 360
         env:
           V2RAY_CONFIG_JSON: ${{ secrets.V2RAY_CONFIG_JSON }}
         run: |
           echo $V2RAY_CONFIG_JSON > v2ray-runtime-config.json
-          docker run --network=host --name v2ray -v ${{ github.workspace }}/v2ray-runtime-config.json:/etc/v2fly/config.json -p 10086:10086 v2fly/v2fly-core run -c /etc/v2fly/config.json
+          docker run --network=host --name v2ray -v ${{ github.workspace }}/v2ray-runtime-config.json:/etc/v2fly/config.json -p 9875:9875 v2fly/v2fly-core run -c /etc/v2fly/config.json
 
       - name: Immediately Cleanup
         if: always()
