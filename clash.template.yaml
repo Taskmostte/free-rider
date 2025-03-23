@@ -13,7 +13,7 @@ proxies:
     port: 9875
     alterId: 0
     cipher: auto
-    uuid: $UUID$
+    uuid: d37970e7-0dc3-42d4-a405-b32f0eb14024
 
 proxy-groups:
   - name: PROXY
