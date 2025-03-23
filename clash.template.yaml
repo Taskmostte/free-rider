@@ -10,7 +10,7 @@ proxies:
   - name: Github Actions V2Ray
     type: vmess
     server: 10.144.254.254
-    port: 10086
+    port: 9875
     alterId: 0
     cipher: auto
     uuid: $UUID$
